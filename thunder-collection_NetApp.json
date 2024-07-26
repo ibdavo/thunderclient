@@ -1,0 +1,88 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "NetApp",
+    "collectionId": "a86eefc0-53c6-4ce9-b9a1-061b0aded8f1",
+    "dateExported": "2024-07-26T13:19:15.808Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "6fba2cc6-2418-4431-89bc-22a6ab1dcad5",
+            "colId": "a86eefc0-53c6-4ce9-b9a1-061b0aded8f1",
+            "containerId": "",
+            "name": "NetApp Create",
+            "url": "{{url}}netapp/create",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-07-26T13:06:02.300Z",
+            "modified": "2024-07-26T13:06:02.300Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"data\":{\n      \"project\":\"cld-automate-np-cah\",\n      \"volume_name\":\"cld-automate-np-test1\",\n      \"request_id\":\"RITM000002\",\n      \"production\":false,\n      \"export_policy\":[\n         {\n            \"allowed_clients\":\"10.49.38.112\",\n            \"access\":\"ReadWrite\",\n            \"root_access\":\"true\"\n         }\n      ],\n      \"size\":1230,\n      \"snapshot_directory\":false,\n      \"labels\":{\n         \"fred\":\"george\"\n      },\n      \"description\":\"still just a test\"\n   },\n   \"attributes\":{\n      \"source\":\"cld_ci_iac_gcp_netapp_cvs\",\n      \"action\":\"create\"\n   }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4c250c1f-72e0-4ae6-b28d-7d5bdbf9f42a",
+            "colId": "a86eefc0-53c6-4ce9-b9a1-061b0aded8f1",
+            "containerId": "",
+            "name": "NetApp Mod",
+            "url": "{{url}}netapp/modify",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-07-26T13:06:02.302Z",
+            "modified": "2024-07-26T13:06:02.302Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"data\":{\n      \"project\":\"cld-automate-np-cah\",\n      \"volume_name\":\"cld-automate-np-test\",\n      \"request_id\":\"RITM000002\",\n      \"production\":false,\n      \"export_policy\":[\n         {\n            \"allowed_clients\":\"10.49.38.112\",\n            \"access\":\"ReadWrite\",\n            \"root_access\":\"true\"\n         }\n      ],\n      \"size\":1230,\n      \"snapshot_directory\":false,\n      \"labels\":{\n         \"fred\":\"george\"\n      },\n      \"description\":\"still just a test\"\n   },\n   \"attributes\":{\n      \"source\":\"cld_ci_iac_gcp_netapp_cvs\",\n      \"action\":\"modify\"\n   }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "26c9b0a2-30a5-4def-bdb9-82624a5f8a15",
+            "colId": "a86eefc0-53c6-4ce9-b9a1-061b0aded8f1",
+            "containerId": "",
+            "name": "NetApp Del",
+            "url": "{{url}}netapp/delete",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-26T13:06:02.303Z",
+            "modified": "2024-07-26T13:06:02.303Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "volume_name",
+                    "value": "cld-automate-np-test.tf",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "project",
+                    "value": "cld-automate-np-cah",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "request_id",
+                    "value": "ritm000990",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "production",
+                    "value": "false",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"data\":{\n      \"project\":\"cld-automate-np-cah\",\n      \"volume_name\":\"cld-automate-np-test\",\n      \"request_id\":\"RITMdel00001\",\n      \"production\":false\n   },\n   \"attributes\":{\n      \"source\":\"cld_ci_iac_gcp_netapp_cvs\",\n      \"action\":\"delete\"\n   }\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "SzHrJqC-WEGjW1dmjf1kXaDMY3osmXWQ19ZF6-qJlu5rE5vaYGvh8VTCES4AL1uESgj3SjIyeJedqdiY1ry3tg"
+}

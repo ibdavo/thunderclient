@@ -1,0 +1,1519 @@
+{
+	"info": {
+		"_postman_id": "a8969b83-6ad9-4b87-9a97-0a6b50b2214e",
+		"name": "CLD-CI-Apigee - Prod",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18186837",
+		"_collection_link": "https://cld-ci.postman.co/workspace/Team-Workspace~b74ac1b2-ccea-486f-82e1-d4e2ae3e36d1/collection/10042714-a8969b83-6ad9-4b87-9a97-0a6b50b2214e?action=share&source=collection_link&creator=18186837"
+	},
+	"item": [
+		{
+			"name": "NetApp",
+			"item": [
+				{
+					"name": "NetApp Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"protocol_types\": [\n        \"NFSv4\"\n    ],\n    \"export_policy\": [\n        {\n            \"allowed_clients\": \"10.49.38.111\",\n            \"access\": \"ReadWrite\",\n            \"root_access\": \"true\"\n        }\n    ],\n    \"size\": 100,\n    \"service_level\": \"extreme\",\n    \"project\": \"gsc-sap-np-cah\",\n    \"volume_name\": \"gsc-sap-np-cah-smartexporter\",\n    \"region\": \"us-central1\",\n    \"request_id\": \"RITM5839376\",\n    \"costcenter\": \"1120000207\",\n    \"network\": \"nonprod-all\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/netapp",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"netapp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NetApp Modify",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"request_id\": \"RITM0000001\",\n    \"project\": \"management-cah\",\n    \"volume_name\": \"management-cah-prd-create-1\",\n    \"size\": 110\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/netapp",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"netapp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NetApp Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/netapp?volume_name=data-intg-svc-pr-cah-prd-boomi-med-dr&project=data-intg-svc-pr-cah&request_id=RITM5719602",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"netapp"
+							],
+							"query": [
+								{
+									"key": "volume_name",
+									"value": "data-intg-svc-pr-cah-prd-boomi-med-dr"
+								},
+								{
+									"key": "project",
+									"value": "data-intg-svc-pr-cah"
+								},
+								{
+									"key": "request_id",
+									"value": "RITM5719602"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Project - Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"project_name\":\"edr-invm-pr\",\n   \"folder_id\":\"folders/178892997936\",\n   \"folder_path\":\"\",\n   \"regulatory_value\":\"\",\n   \"project_type\":\"prod\",\n   \"prod_vpc\":\"pharma\",\n   \"costcenter\":\"7510000009\",\n   \"apmid\":\"APM0030216\",\n   \"assignmentgroup\":\"\",\n   \"labels\":\"\",\n   \"request_id\":\"RITM5907336f1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/gcp_project",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"gcp_project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project - Modify",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_folder_path\": \"Prod\",\n    \"regulatory_value\": \"\",\n    \"project_name\": \"cld-z5-pr\",\n    \"folder_id\": \"624544290470\",\n    \"request_id\": \"RITM5731804\",\n    \"folder_path\": \"Prod/CSEA-CSS\",\n    \"labels\": {\n        \"apmid\": \"27545\",\n        \"regulatory\": \"\",\n        \"assignmentgroup\": \"null\",\n        \"costcenter\": \"1120000185\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/gcp_project",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"gcp_project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project - Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/gcp_project?project_name=ent-axway-pr-cah&folder_path=TO_BE_DELETED&request_id=RITM5565920",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"gcp_project"
+							],
+							"query": [
+								{
+									"key": "project_name",
+									"value": "ent-axway-pr-cah"
+								},
+								{
+									"key": "folder_path",
+									"value": "TO_BE_DELETED"
+								},
+								{
+									"key": "request_id",
+									"value": "RITM5565920"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"request_id\": \"RITM0000002\",\n    \"project_name\": \"cld-z4-np\",\n    \"project_type\": \"nonprod\",\n    \"regulatory_value\": \"\",\n    \"prod_vpc\": \"corp\",\n    \"costcenter\": \"1120000185\",\n    \"apmid\": \"apm0028353\",\n    \"parent_folder_name\": \"Nonprod\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/gcp_project",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"gcp_project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Project Exists - CLD-CI PROD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/gcp_project?target=project&name=cft-cloudbuild-cah",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"gcp_project"
+							],
+							"query": [
+								{
+									"key": "target",
+									"value": "project"
+								},
+								{
+									"key": "name",
+									"value": "cft-cloudbuild-cah"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buckets",
+			"item": [
+				{
+					"name": "Bucket - Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"labels\":{\n      \"apmid\":\"apm0014557\"\n   },\n   \"life_cycle\":\"auto_delete\",\n   \"life_cycle_time\":\"30\",\n   \"name\":\"cld-automate-np-cah-davo101\",\n   \"project_id\":\"cld-automate-np-cah\",\n   \"region\":\"US\",\n   \"request_id\":\"BUCKET01\",\n   \"retention_policy\":\"false\",\n   \"storage_class\":\"STANDARD\",\n   \"versioning\":false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.net/v1/cld-ci/bucket",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"net"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"bucket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bucket - Modify",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"request_id\": \"RITM4990001\",\n    \"name\": \"cld-automate-pr-cah_prod-smk-test-0\",\n    \"project_id\": \"cld-automate-pr-cah\",\n    \"storage_class\": \"ARCHIVE\",\n    \"versioning\": false,\n    \"life_cycle\": \"auto_delete\",\n    \"life_cycle_time\": 123,\n    \"retention_policy\": \"1234567\",\n    \"labels\": {\n        \"test-label\": \"test-value\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/bucket",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"bucket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bucket - Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.NET/v1/cld-ci/bucket?name=cld-automate-np-cah-davo101&project_id=cld-automate-np-cah&request_id=DYEBUCKET",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"NET"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"bucket"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "cld-automate-np-cah-davo101"
+								},
+								{
+									"key": "project_id",
+									"value": "cld-automate-np-cah"
+								},
+								{
+									"key": "request_id",
+									"value": "DYEBUCKET"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tanzu",
+			"item": [
+				{
+					"name": "Tanzu Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"rick.duckworth@cardinalhealth.com\",\n    \"organization\": \"optifreight-next\",\n    \"space\": \"supplier-platform-prod\",\n    \"role_type\": \"space_developer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/tanzu",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"tanzu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tanzu Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"rick.duckworth@cardinalhealth.com\",\n    \"organization\": \"optifreight-next\",\n    \"space\": \"supplier-platform-prod\",\n    \"role_type\": \"space_developer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/tanzu",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"tanzu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM",
+			"item": [
+				{
+					"name": "VM - Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"machine_type\":\"n2-standard-4\",\n   \"service_account\":\"med-mfg-labs-pr-def\",\n   \"disks\":[\n      {\n         \"backup\":true,\n         \"disk_type\":\"pd-standard\",\n         \"name\":\"data\",\n         \"size_gb\":\"100\"\n      }\n   ],\n   \"boot_disk_type\":\"pd-standard\",\n   \"adgroups\":\"P-MGMSC-Labware-Admins,P-MGMSC-Labware-Admins\",\n   \"internet_facing\":false,\n   \"backup_boot_disk\":true,\n   \"tags\":\"smb-in,internal-smtp,internet-us-central1\",\n   \"labels\":{\n      \"project_wbs\":\"2024_01091_05\",\n      \"apmid\":\"apm0031014\",\n      \"use_terraform\":\"yes\",\n      \"autostart\":\"weekdays-0900-edt\",\n      \"autostop\":\"all-2200-edt\"\n   },\n   \"instance_env\":\"stage\",\n   \"image_family\":\"cah-windows-2022\",\n   \"environment\":\"prod\",\n   \"line_of_business\":\"med\",\n   \"zone\":\"us-central1-a\",\n   \"gcp_project\":\"med-mfg-labs-pr-cah\",\n   \"name\":\"wsec5009labfs01\",\n   \"network_project\":\"cah-host-prod\",\n   \"boot_disk_size\":\"60\",\n   \"request_id\":\"RITM6062144\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.net/v1/cld-ci/vm",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"net"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"vm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VM - Modify",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"machine_type\": \"n1-standard-16\",\n    \"gcp_project\": \"cld-automate-np-cah\",\n    \"name\": \"ldec5009aml95\",\n    \"request_id\": \"RITM0DAVO\",\n    \"instance_env\": \"development\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.net/v1/cld-ci/vm",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"net"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"vm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VM - Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.NET/v1/cld-ci/vm?name=ldec5009aml95&instance_env=development&request_id=DYEDAVO&gcp_project=cld-automate-np-cah",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"NET"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"vm"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ldec5009aml95"
+								},
+								{
+									"key": "instance_env",
+									"value": "development"
+								},
+								{
+									"key": "request_id",
+									"value": "DYEDAVO"
+								},
+								{
+									"key": "gcp_project",
+									"value": "cld-automate-np-cah"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FW",
+			"item": [
+				{
+					"name": "Create FW",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rule_name\": \"taia-all-wavemark-mds-np-llk-ext-oth01\",\n    \"request_id\": \"RITM0000001\",\n    \"vpc_name\": \"nonprod-all\",\n    \"project_id\": \"cld-automate-np-cah\",\n    \"target_service_account\": \"cld-automate-np-def@cld-automate-np-cah.iam.gserviceaccount.com\",\n    \"direction\": \"ingress\",\n    \"action\": \"allow\",\n    \"apm_id\": \"APM0028353\",\n    \"tcp_ports\": \"80\",\n    \"ip_ranges\": \"100.127.0.0/22\",\n    \"description\": \"ingress port 19999 appservers to Dev Looker Server\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/firewall",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"firewall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create FW Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rule_name\": \"taia-corp-cld-automate-pr-aron1-app01\",\n    \"request_id\": \"RITM0000001\",\n    \"vpc_name\": \"prod-corp\",\n    \"project_id\": \"cld-automate-pr-cah\",\n    \"target_service_account\": \"cld-automate-pr-def@cld-automate-pr-cah.iam.gserviceaccount.com\",\n    \"direction\": \"ingress\",\n    \"action\": \"allow\",\n    \"apm_id\": \"APM0028353\",\n    \"tcp_ports\": \"443\",\n    \"ip_ranges\": \"10.10.10.10/32\",\n    \"description\": \"ingress port 443\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/firewall",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"firewall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify FW",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rule_name\": \"taea-pharma-major-phm-sox-pr-def-app02\",\n    \"request_id\": \"RITM5682115\",\n    \"vpc_name\": \"prod-pharma\",\n    \"project_id\": \"major-phm-sox-pr-cah\",\n    \"direction\": \"egress\",\n    \"action\": \"allow\",\n    \"apm_id\": \"APM0014642\",\n    \"tcp_ports\": \"9100-9102\",\n    \"ip_ranges\": \"10.230.0.0/16,10.104.162.132/32,10.104.162.134/32,10.210.112.71/32,10.210.112.72/32,10.112.34.0/24\",\n    \"description\": \"Allows outbound FACTS printing from CUPS to Indy, Memphis, Detroit, Dublin. Replaces legacy rule aea-pharma-major-phm-sox-pr-def-print.\",\n    \"disabled\": \"false\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/firewall",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"firewall"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "Search TF VMs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/search?filter=project=management-cah&scope=repo/cld-gcp-vm&get_details=True&type=github.instance",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "project=management-cah"
+								},
+								{
+									"key": "scope",
+									"value": "repo/cld-gcp-vm"
+								},
+								{
+									"key": "get_details",
+									"value": "True"
+								},
+								{
+									"key": "type",
+									"value": "github.instance"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search GKE Clusters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/search?type=container.googleapis.com/Cluster&filter=*&scope=organizations/992617106989",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"search"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "container.googleapis.com/Cluster"
+								},
+								{
+									"key": "filter",
+									"value": "*"
+								},
+								{
+									"key": "scope",
+									"value": "organizations/992617106989"
+								},
+								{
+									"key": "get_details",
+									"value": "True",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search GKE Namespaces",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/search?type=k8s.io/Namespace&filter=name:track-trace-dev&scope=organizations/992617106989",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"search"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "k8s.io/Namespace"
+								},
+								{
+									"key": "filter",
+									"value": "name:track-trace-dev"
+								},
+								{
+									"key": "scope",
+									"value": "organizations/992617106989"
+								},
+								{
+									"key": "get_details",
+									"value": "False",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search GCP Disks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/search?type=compute.googleapis.com/Disk&filter=*&scope=projects/cld-automate-np-cah",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"search"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "compute.googleapis.com/Disk"
+								},
+								{
+									"key": "filter",
+									"value": "*"
+								},
+								{
+									"key": "scope",
+									"value": "projects/cld-automate-np-cah"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search GCP Instances",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/search?type=compute.googleapis.com/Instance&filter=*&scope=projects/cld-automate-np-cah",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"search"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "compute.googleapis.com/Instance"
+								},
+								{
+									"key": "filter",
+									"value": "*"
+								},
+								{
+									"key": "scope",
+									"value": "projects/cld-automate-np-cah"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/search?type=cloudresourcemanager.googleapis.com/Project&filter=*&scope=organizations/992617106989",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"search"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "cloudresourcemanager.googleapis.com/Project"
+								},
+								{
+									"key": "filter",
+									"value": "*"
+								},
+								{
+									"key": "scope",
+									"value": "organizations/992617106989"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search TF Projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/search?filter=*&scope=repo/cld-gcp-projects&type=github.project",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "*"
+								},
+								{
+									"key": "scope",
+									"value": "repo/cld-gcp-projects"
+								},
+								{
+									"key": "type",
+									"value": "github.project"
+								},
+								{
+									"key": "get_details",
+									"value": "True",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search FW",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/search?type=compute.googleapis.com/Firewall&filter=*&scope=organizations/992617106989",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"search"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "compute.googleapis.com/Firewall"
+								},
+								{
+									"key": "filter",
+									"value": "*"
+								},
+								{
+									"key": "scope",
+									"value": "organizations/992617106989"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search FW ServiceAccounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/search?type=iam.googleapis.com/ServiceAccount&filter=cld-automate-np-cah&scope=organizations/992617106989",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"search"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "iam.googleapis.com/ServiceAccount"
+								},
+								{
+									"key": "filter",
+									"value": "cld-automate-np-cah"
+								},
+								{
+									"key": "scope",
+									"value": "organizations/992617106989"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GCP Folder Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/gcp_project?target=group&name=a-cloud-cribl-ent-pr-owner",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"gcp_project"
+							],
+							"query": [
+								{
+									"key": "target",
+									"value": "group"
+								},
+								{
+									"key": "name",
+									"value": "a-cloud-cribl-ent-pr-owner"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/search?type=github.firewall&filter=&scope=organizations/992617106989",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"search"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "github.firewall"
+								},
+								{
+									"key": "filter",
+									"value": ""
+								},
+								{
+									"key": "scope",
+									"value": "organizations/992617106989"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search LOB",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/search?type=cloudresourcemanager.googleapis.com/Project&filter=displayName: rgh-pr&scope=organizations/992617106989",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"search"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "cloudresourcemanager.googleapis.com/Project"
+								},
+								{
+									"key": "filter",
+									"value": "displayName: rgh-pr"
+								},
+								{
+									"key": "scope",
+									"value": "organizations/992617106989"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Adam",
+			"item": [
+				{
+					"name": "ADAM via Apigee Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"adam_token\", jsonData.access_token);",
+									"console.log(responseBody)",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"adam\",\"password\":\"v5Q24azLTnzk96Fu\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/adam/login",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"adam",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADAM via Apigee - Get Group Members by EID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/adam/group/members/eid?name=A-Tanzu-CaresAdmins-PRD&env=production&access_adam_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjg5MzY3NDA3LCJqdGkiOiI2NDM5ODdkZS0xOTNlLTQ2Y2ItOTZjNC05MDk3YWY2ZmNmZGEiLCJuYmYiOjE2ODkzNjc0MDcsInR5cGUiOiJhY2Nlc3MiLCJzdWIiOiI2NDJmOWU1MGQxNmZiN2I1YjcyYjNhMzMiLCJleHAiOjE2ODkzODE4MDd9.AehbQZUfgC_pcpgfDi0b7FTOBQ43tCml-AOIewmNxiU",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"adam",
+								"group",
+								"members",
+								"eid"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "A-Tanzu-CaresAdmins-PRD"
+								},
+								{
+									"key": "env",
+									"value": "production"
+								},
+								{
+									"key": "access_adam_token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjg5MzY3NDA3LCJqdGkiOiI2NDM5ODdkZS0xOTNlLTQ2Y2ItOTZjNC05MDk3YWY2ZmNmZGEiLCJuYmYiOjE2ODkzNjc0MDcsInR5cGUiOiJhY2Nlc3MiLCJzdWIiOiI2NDJmOWU1MGQxNmZiN2I1YjcyYjNhMzMiLCJleHAiOjE2ODkzODE4MDd9.AehbQZUfgC_pcpgfDi0b7FTOBQ43tCml-AOIewmNxiU"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADAM Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"adam\",\n    \"password\": \"v5Q24azLTnzk96Fu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/adam/login",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"adam",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADAM Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/adam/group/members/eid?name=A-Tanzu-ELMAdmins-PRD&access_adam_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjk3MjAxNTM0LCJqdGkiOiJlMTkwOTE2Ny02YjAxLTQ2ZWUtYjYyYS1lM2JjM2E3MDNmYmYiLCJuYmYiOjE2OTcyMDE1MzQsInR5cGUiOiJhY2Nlc3MiLCJzdWIiOiI2NTA0NmIxOWZhYzcxMmE5M2Y3ODM5MGQiLCJleHAiOjE2OTcyMTU5MzR9.QWjO8qYE6kwyuGpPf68VeHzyz8VP2m_1lmzss2GtVCQ&env=production",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"adam",
+								"group",
+								"members",
+								"eid"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "A-Tanzu-ELMAdmins-PRD"
+								},
+								{
+									"key": "access_adam_token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjk3MjAxNTM0LCJqdGkiOiJlMTkwOTE2Ny02YjAxLTQ2ZWUtYjYyYS1lM2JjM2E3MDNmYmYiLCJuYmYiOjE2OTcyMDE1MzQsInR5cGUiOiJhY2Nlc3MiLCJzdWIiOiI2NTA0NmIxOWZhYzcxMmE5M2Y3ODM5MGQiLCJleHAiOjE2OTcyMTU5MzR9.QWjO8qYE6kwyuGpPf68VeHzyz8VP2m_1lmzss2GtVCQ"
+								},
+								{
+									"key": "env",
+									"value": "production"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LB",
+			"item": [
+				{
+					"name": "Create LB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"request_id\":\"RITM6066490f2\",\n   \"project_id\":\"med-mfg-labs-pr-cah\",\n   \"lb_type\":\"ilb\",\n   \"lb_name\":\"agilentcdslb\",\n   \"network_project\":\"cah-host-prod\",\n   \"environment\":\"prod\",\n   \"line_of_business\":\"med\",\n   \"internetFacing\":false,\n   \"region\":\"us-central1\",\n   \"zones\":[\n      \"us-central1-a\",\n      \"us-central1-b\",\n      \"us-central1-c\",\n      \"us-central1-f\"\n   ],\n   \"cah_subnet\":\"all\",\n   \"forwarding_rule_config\":{\n      \"ports\":[\n         443\n      ]\n   },\n   \"labels\":{\n      \"apmid\":\"31022\",\n      \"costcenter\":\"1120000211\",\n      \"assignmentgroup\":\"eit-med-mfg-labs\"\n   },\n   \"backend_config\":{\n      \"session_affinity\":\"\",\n      \"timeout_sec\":30,\n      \"connection_draining_timeout_sec\":\"300\"\n   },\n   \"health_check_config\":{\n      \"type\":\"https\",\n      \"check\":{\n         \"port\":\"443\"\n      },\n      \"config\":{\n         \"check_interval_sec\":\"5\",\n         \"request_path\":\"\",\n         \"timeout_sec\":\"5\",\n         \"unhealthy_threshold\":\"10\"\n      },\n      \"logging\":false\n   },\n   \"protocol\":\"TCP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cardinalhealth.com/v1/cld-ci/lb",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cardinalhealth",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cld-ci",
+								"lb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get OAuth Token - PROD",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "mZIHy9qerGA8CmF3CRFDfS3ocOwvEDjA",
+							"type": "default"
+						},
+						{
+							"key": "client_secret",
+							"value": "snTgBXstP3BqI1xg",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.cardinalhealth.com/v1/cld-ci/oauth/token",
+					"protocol": "https",
+					"host": [
+						"api",
+						"cardinalhealth",
+						"com"
+					],
+					"path": [
+						"v1",
+						"cld-ci",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Group Exists - CLD-CI PROD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.cardinalhealth.com/v1/cld-ci/gcp_project?target=group&name=a-cloud-cld-automate-np-owner",
+					"protocol": "https",
+					"host": [
+						"api",
+						"cardinalhealth",
+						"com"
+					],
+					"path": [
+						"v1",
+						"cld-ci",
+						"gcp_project"
+					],
+					"query": [
+						{
+							"key": "target",
+							"value": "group"
+						},
+						{
+							"key": "name",
+							"value": "a-cloud-cld-automate-np-owner"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Metrics",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"caller\": \"cld-ci-prod-test\",\n    \"business_unit\": \"corp\",\n    \"project\": \"cld-automate-pr-cah\",\n    \"automation_item\": \"savings-api\",\n    \"status\": 1,\n    \"run_time\": 0,\n    \"request_id\": \"NO_REQUEST\",\n    \"environment\": \"prod\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.cardinalhealth.com/v1/cld-ci/savings",
+					"protocol": "https",
+					"host": [
+						"api",
+						"cardinalhealth",
+						"com"
+					],
+					"path": [
+						"v1",
+						"cld-ci",
+						"savings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CostEstimate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"workload\": \"compute\",\n    \"compute_workload\": {\n        \"vm_name\": \"test_vm\",\n        \"region\": \"us-central1\",\n        \"machine_type\": {\n            \"predefined\": {\n                \"machine_type\": \"n2-standard\"\n            }\n        },\n        \"persistent_disks\": {}\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.cardinalhealth.com/v1/cld-ci/costestimate",
+					"protocol": "https",
+					"host": [
+						"api",
+						"cardinalhealth",
+						"com"
+					],
+					"path": [
+						"v1",
+						"cld-ci",
+						"costestimate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessTokenUrl",
+				"value": "https://api.cardinalhealth.net/v1/cld-ci/oauth/token",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{CLD-CI-Apigee_Client-Secret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{CLD-CI-Apigee_Client-ID}}",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "Apigee Prod",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://api.dev.cardinalhealth.com/v1/cld-ci/oauth/token",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "CLD-CI-Apigee_Client-ID",
+			"value": "mHPkGhEDc1C6vcES80vlSlRTfhCG4p33"
+		},
+		{
+			"key": "CLD-CI-Apigee_Client-Secret",
+			"value": "gwPmYemGy9JCvyDw"
+		}
+	]
+}
